@@ -1,0 +1,33 @@
+$col1:red;
+$col2:#ccffff;
+$col3:blue;
+h1{
+	text-align:center;
+	color:black;
+	margin-top:20px;
+	padding-top:30px;
+	margin-left:270px;
+	text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;
+}
+
+.btn{
+	margin-left:300px;
+}
+.col
+{
+	background-color:#f2f2f2;
+	width:700px;
+	margin-top:50px;
+	margin-left:570px;
+}
+h4{
+	color:black;
+}
+.invalid{
+background-color:$col2;
+color:red;
+}
+.for{
+	width:500px;
+	margin-left:200px;
+}

@@ -1,0 +1,86 @@
+$col1:#00e6b8;
+$col2:#001a33;
+$col3:#ffffff;
+$col4:linen;
+$col5:red;
+$col6:black;
+$col7:#99ff33;
+$col8:#2F4F4F;
+
+.navbar{
+	background-color:#404040;
+
+}
+img{
+	width:50px;
+	height:50px;
+}
+.foot{
+
+	background-color:$col2;
+	padding:10px;
+	color:$col3;
+}
+h3{
+	color:$col7;
+	font-weight:bold;
+}
+h3:hover{
+	color:$col3;
+}
+.middle{
+	margin-top:-20px;
+	background-image:url("../assets/img/web1.jpg");
+	background-repeat:no-repeat;
+	width:1560px;
+	height:700px;
+	margin-left:-210px;
+}
+.middle ::after{
+	border-bottom:10px solid transparent;
+	border-image: url("../assets/img/zig1.jpg") 30 round;
+}
+.text{
+	padding:15px;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	text-align:center;
+	color:white;
+	background-color:#0066ff;
+	margin-top:5px;
+	font-size:20px;
+}
+div.left{
+	right:30px;
+	top:150px;
+	width:50px;
+	position:fixed;
+}
+h1,p{
+	text-align:center;
+}
+.i{
+	margin-left:150px;
+}
+h4{
+	font-size:28px;
+	text-align:center;
+}
+.border{
+	border:1px solid black;
+	border-radius:25px;
+	padding:10px;
+	margin:20px;
+}
+.h:hover{
+	/*width:340px;
+	height:320px;*/
+	box-shadow: 5px 10px 18px red;
+}
+.iconn{
+	transform: rotateX(150deg);
+	transform: rotateY(130deg);
+	transform: rotateZ(90deg);
+
+}

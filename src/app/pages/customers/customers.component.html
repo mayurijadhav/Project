@@ -1,0 +1,19 @@
+<h1>Customers List</h1>
+<table class="tt">
+	<tr>
+		<th>Sr.No.</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Address</th>
+		<th>Email Id</th>
+		<th>Mobile No.</th>
+	</tr>
+	<tr *ngFor="let x of users; let i = index">
+		<td> {{ i + 1 }} </td>
+		<td> {{ x.fname }} </td>
+		<td> {{ x.lname }} </td>
+		<td> {{ x.add }} </td>
+		<td> {{ x.em }} </td>
+		<td> {{ x.mob }} </td>
+	</tr>
+</table>

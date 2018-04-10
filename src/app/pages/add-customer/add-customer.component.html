@@ -1,0 +1,37 @@
+<h1>Add User Form</h1>
+<div class="container col">
+	<form method="post" #userForm="ngForm" (ngSubmit)="onSubmit(user, userForm)">
+		<div class="form-group">
+			<h4>First Name:</h4><input class="form-control" type="text" name="fname" [class.invalid]="yname.touched && yname.invalid" [(ngModel)] = "user.fname" pattern="[a-zA-Z]+" #yname="ngModel" (change)="getModel(yname)" required>
+			<div [class.invalid]="yname.touched && yname.invalid" *ngIf="yname.touched && yname.invalid">
+				<span *ngIf="yname.errors.required">First Name is required</span>
+				<span *ngIf="yname.errors.pattern">Only Alphabets are accepted.</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<h4>Last Name:</h4><input class="form-control" type="text" name="lname" [class.invalid]="xname.touched && xname.invalid" [(ngModel)] ="user.lname" #xname="ngModel" (change)="getModel(xname)" pattern="[a-zA-Z]+" required>
+			<div [class.invalid]="xname.touched && xname.invalid" *ngIf="xname.touched && xname.invalid">
+				<span *ngIf="xname.errors.required">Last Name is required</span>
+				<span *ngIf="xname.errors.pattern">Only Alphabets are accepted.</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<h4>Address:</h4><textarea name="address" class="form-control" name="add" required></textarea>
+		</div>
+		<div class="form-group">
+			<h4>Email Id:</h4><input class="form-control" type="email" name="em" [class.invalid]="x1name.touched && x1name.invalid" [(ngModel)]="user.em" #x1name="ngModel" (change)="getModel(x1name)" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+			<div [class.invalid]="x1name.touched && x1name.invalid" *ngIf="x1name.touched && x1name.invalid">
+				<span *ngIf="x1name.errors.required">Email Id is required</span>
+				<span *ngIf="x1name.errors.pattern">Pattern Mismatch...</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<h4>Mobile Number</h4><input class="form-control" type="tel" name="mob" [class.invalid]="mname.touched && mname.invalid" [(ngModel)]="user.mob" #mname="ngModel" (change)="getModel(mname)" pattern="[0-9]{10}" required>
+			<div [class.invalid]="mname.touched && mname.invalid" *ngIf="mname.touched && mname.invalid">
+				<span *ngIf="mname.errors.required">Mobile Number is required</span>
+				<span *ngIf="mname.errors.pattern">pattern Mismatch..</span>
+			</div>
+		</div>
+			<button type="submit" class="btn btn-default btn-lg" value="Submit">Submit</button>
+	</form>
+</div>
